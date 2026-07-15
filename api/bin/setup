@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+require "fileutils"
+APP_ROOT = File.expand_path("..", __dir__)
+Dir.chdir APP_ROOT do
+  system("bundle check") || system("bundle install") || abort("bundle install falhou")
+  system("bin/rails db:mongoid:create_indexes")
+end

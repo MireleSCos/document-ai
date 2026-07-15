@@ -1,0 +1,16 @@
+development:
+  clients:
+    default:
+      uri: <%= ENV.fetch("MONGODB_URI", "mongodb://localhost:27017/workverse_document_ai_development") %>
+  options:
+    raise_not_found_error: true
+
+test:
+  clients:
+    default:
+      uri: <%= ENV.fetch("MONGODB_URI_TEST", "mongodb://localhost:27017/workverse_document_ai_test") %>
+
+production:
+  clients:
+    default:
+      uri: <%= ENV.fetch("MONGODB_URI") %>
