@@ -1,0 +1,8 @@
+.DS_Store
+.env
+api/.bundle
+api/log/*
+api/tmp/*
+api/vendor/bundle
+web/node_modules
+web/dist
