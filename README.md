@@ -6,7 +6,9 @@ POC reutilizável para validação visual de:
 
 - RG/CIN;
 - certidão de casamento;
-- comprovante de endereço.
+- comprovante de endereço;
+- título de eleitor;
+- diploma.
 
 A API recebe uma imagem ou PDF, cria uma validação em `PROCESSING`, processa a análise em background via Sidekiq e permite consultar o resultado final por ID:
 
@@ -98,7 +100,7 @@ Campos:
 | Campo | Obrigatório | Valores |
 |---|---:|---|
 | `file` | sim | PDF, JPG, PNG ou WEBP |
-| `expected_type` | sim | `rg`, `marriage_certificate`, `address_proof` |
+| `expected_type` | sim | `rg`, `marriage_certificate`, `address_proof`, `voter_registration`, `diploma` |
 | `candidate_name` | não | nome cadastrado |
 | `candidate_cpf` | não | CPF cadastrado |
 | `project_id` | não | ObjectId |

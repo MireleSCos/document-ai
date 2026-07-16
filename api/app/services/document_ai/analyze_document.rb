@@ -3,7 +3,9 @@ module DocumentAi
     VALIDATORS = {
       "rg" => Validators::RgValidator,
       "marriage_certificate" => Validators::MarriageCertificateValidator,
-      "address_proof" => Validators::AddressProofValidator
+      "address_proof" => Validators::AddressProofValidator,
+      "voter_registration" => Validators::VoterRegistrationValidator,
+      "diploma" => Validators::DiplomaValidator
     }.freeze
 
     def initialize(uploaded_file:, expected_type:, context: {}, provider: nil)

@@ -58,6 +58,8 @@ class DocumentShadowValidationJob
     return "rg" if value.match?(/\brg\b|identidade|carteira de identidade/)
     return "marriage_certificate" if value.match?(/certidao.*casamento/)
     return "address_proof" if value.match?(/comprovante.*endereco|comprovante.*residencia/)
+    return "voter_registration" if value.match?(/titulo.*eleitor|titulo.*eleitoral|e-titulo|eleitor/)
+    return "diploma" if value.match?(/diploma|certificado.*conclusao|declaracao.*conclusao/)
     nil
   end
 end

@@ -14,11 +14,23 @@ module DocumentAi
         - extraia nomes dos cônjuges, data, matrícula e cartório quando visíveis;
         - não confunda com certidão de nascimento ou declaração de união estável.
       TEXT
-      "address_proof" => <<~TEXT
+      "address_proof" => <<~TEXT,
         Para comprovante de endereço:
         - confirme que o documento contém nome, endereço, emissor e data;
         - exemplos: energia, água, telefone, internet, condomínio, IPTU ou extrato;
         - não aceite conversa, texto digitado ou imagem sem emissor verificável.
+      TEXT
+      "voter_registration" => <<~TEXT,
+        Para título de eleitor:
+        - confirme que é um título eleitoral brasileiro, e-Título ou comprovante eleitoral equivalente;
+        - extraia nome, número do título, zona, seção, município e UF quando visíveis;
+        - não confunda com RG, CPF, carteira de trabalho ou comprovante de votação.
+      TEXT
+      "diploma" => <<~TEXT
+        Para diploma ou certificado acadêmico:
+        - confirme que é diploma, certificado de conclusão ou declaração institucional de formação;
+        - extraia nome do aluno, instituição, curso, grau/título, data e registro quando visíveis;
+        - não aceite currículo, histórico escolar isolado ou imagem sem instituição identificável.
       TEXT
     }.freeze
 

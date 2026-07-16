@@ -3,7 +3,9 @@ module Api
     class DocumentValidationsController < ApplicationController
       require "fileutils"
 
-      SUPPORTED_TYPES = %w[rg marriage_certificate address_proof].freeze
+      SUPPORTED_TYPES = %w[
+        rg marriage_certificate address_proof voter_registration diploma
+      ].freeze
 
       def create
         uploaded_file = params[:file]

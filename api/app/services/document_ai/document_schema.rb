@@ -7,7 +7,7 @@ module DocumentAi
         properties: {
           detected_type: {
             type: "string",
-            enum: %w[rg marriage_certificate address_proof unknown]
+            enum: %w[rg marriage_certificate address_proof voter_registration diploma unknown]
           },
           confidence: { type: "number", minimum: 0, maximum: 1 },
           document_present: { type: "boolean" },
@@ -41,12 +41,24 @@ module DocumentAi
               address: nullable_string,
               postal_code: nullable_string,
               document_date: nullable_string,
-              issuer: nullable_string
+              issuer: nullable_string,
+              voter_registration_number: nullable_string,
+              electoral_zone: nullable_string,
+              electoral_section: nullable_string,
+              municipality: nullable_string,
+              state: nullable_string,
+              institution_name: nullable_string,
+              course_name: nullable_string,
+              degree_name: nullable_string,
+              graduation_date: nullable_string,
+              diploma_registration_number: nullable_string
             },
             required: %w[
               full_name cpf rg_number birth_date issue_date issuing_authority
               spouse_one_name spouse_two_name marriage_date registry_number
               registry_office address postal_code document_date issuer
+              voter_registration_number electoral_zone electoral_section municipality state
+              institution_name course_name degree_name graduation_date diploma_registration_number
             ]
           },
           visual_warnings: { type: "array", items: { type: "string" } },

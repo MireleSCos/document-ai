@@ -101,6 +101,8 @@ function wait(milliseconds) {
           <option value="rg">RG / CIN</option>
           <option value="marriage_certificate">Certidão de casamento</option>
           <option value="address_proof">Comprovante de endereço</option>
+          <option value="voter_registration">Título de eleitor</option>
+          <option value="diploma">Diploma</option>
         </select>
       </label>
 
